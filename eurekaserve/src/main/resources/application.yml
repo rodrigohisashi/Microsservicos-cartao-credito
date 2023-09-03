@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: eurekaserver
+  security:
+    user:
+      name: adm
+      password: adm
+
+server:
+  port:  8761
+
+# Nao se registrar como eureka (pois eh o server) / buscar os registros dos microsservicos? Quem fara isso eh o gateway
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    healthcheck:
+      enabled: on
